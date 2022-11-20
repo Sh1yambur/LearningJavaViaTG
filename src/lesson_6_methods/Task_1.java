@@ -1,4 +1,4 @@
-package lesson_2022_11_16_methods;
+package lesson_6_methods;
 
 import java.util.Scanner;
 

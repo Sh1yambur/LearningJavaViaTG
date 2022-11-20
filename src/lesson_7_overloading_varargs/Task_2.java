@@ -1,4 +1,4 @@
-package lesson_2022_11_17_methods;
+package lesson_7_overloading_varargs;
 
 /*
  * Реализовать методы «вычисления суммы» для всех примитивных типов, кроме void. Возвращать:

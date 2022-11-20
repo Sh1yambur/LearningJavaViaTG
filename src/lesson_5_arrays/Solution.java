@@ -1,4 +1,4 @@
-package lesson_2022_11_15_arrays;
+package lesson_5_arrays;
 
 import java.util.Scanner;
 

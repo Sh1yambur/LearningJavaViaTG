@@ -1,7 +1,7 @@
-package lesson_2022_11_16_methods;
+package lesson_7_overloading_varargs;
 
 public class Solution {
     public static void main(String[] args) {
-        Task_3.execute();
+        Task_4.execute();
     }
 }

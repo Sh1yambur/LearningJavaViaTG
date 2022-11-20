@@ -1,4 +1,4 @@
-package lesson_2022_11_17_methods;
+package lesson_7_overloading_varargs;
 
 /*
 * Написать программу, которая объединяет любое количество строк, объединяя их через пробел.

@@ -1,4 +1,4 @@
-package lesson_2022_11_14_loops;
+package lesson_4_loops;
 
 import java.util.Scanner;
 
