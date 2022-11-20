@@ -11,7 +11,7 @@ package lesson_2022_11_18_classes_and_objects;
  */
 
 public class Counter {
-    private String name;
+    private final String name;
     private int count;
 
     public Counter(String name, int count) {
