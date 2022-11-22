@@ -1,4 +1,4 @@
-package lesson_9_fields_static_final;
+package lesson_10_fields_static_final;
 
 public class Solution {
     public static void main(String[] args) {
