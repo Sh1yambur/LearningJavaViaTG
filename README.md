@@ -40,3 +40,6 @@
 
 [Урок 11](https://telegra.ph/OOP-Pervoe-znakomstvo-Ponyatie-abstrakcii-Vidy-otnoshenij-mezhdu-obektami-11-20) |
 ООП. Первое знакомство. Понятие абстракции. Виды отношений между объектами
+
+[Урок 12](https://telegra.ph/Inkapsulyaciya-Pakety-Modifikatory-dostupa-Gettery-i-Settery-11-22) |
+Инкапсуляция. Пакеты. Модификаторы доступа. Getter'ы и Setter'ы
