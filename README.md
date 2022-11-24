@@ -43,3 +43,6 @@
 
 [Урок 12](https://telegra.ph/Inkapsulyaciya-Pakety-Modifikatory-dostupa-Gettery-i-Settery-11-22) |
 Инкапсуляция. Пакеты. Модификаторы доступа. Getter'ы и Setter'ы
+
+[Урок 13](https://telegra.ph/Nasledovanie-Klyuchevoe-slovo-extends-i-ispolzovanie-protected-Klyuchevoe-slovo-super-Privedenie-ssylochnyh-tipov-11-23) |
+Наследование. Ключевое слово extends и использование protected. Ключевое слово super. Приведение ссылочных типов
