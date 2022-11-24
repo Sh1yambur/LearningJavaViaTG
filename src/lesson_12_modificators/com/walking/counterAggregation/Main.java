@@ -2,35 +2,38 @@ package lesson_12_modificators.com.walking.counterAggregation;
 
 public class Main {
     public static void main(String[] args) {
-        makeMockCounters();
-        makeMockValues();
-        printCountersValue(CounterService.getAllCounters());
+        CounterService service = new CounterService();
+
+        makeMockCounters(service);
+        makeMockValues(service);
+
+        printCountersValue(service.getAllCounters());
     }
 
-    private static void makeMockCounters() {
-        Counter gas = new Counter("Gas", "m\u00B3");
-        Counter coldWater = new Counter("Cold Water", "m\u00B3");
-        Counter hotWater = new Counter("Hot Water", "m\u00B3");
-        Counter electricity = new Counter("Electricity", "kW*h");
+    private static void makeMockCounters(CounterService service) {
+        Counter gas = new Counter("Gas", 4242, "m\u00B3");
+        Counter coldWater = new Counter("Cold Water", 1000, "m\u00B3");
+        Counter hotWater = new Counter("Hot Water", 500, "m\u00B3");
+        Counter electricity = new Counter("Electricity", 7070, "kW*h");
 
-        CounterService.addCounters(gas, coldWater, hotWater, electricity);
+        service.addCounters(gas, coldWater, hotWater, electricity);
 
-        Counter electricity2 = new Counter("Electricity", "kW*h");
-        CounterService.addCounter(electricity2);
+        Counter electricity2 = new Counter("Electricity", 777, "kW*h");
+        service.addCounter(electricity2);
     }
 
-    private static void makeMockValues() {
-        CounterService.increaseValue("Gas", 4242);
-        CounterService.increaseValue("Hot Water", 7700);
-        CounterService.increaseValue("Cold Water", 555);
-        CounterService.increaseValue("Electricity", 999);
+    private static void makeMockValues(CounterService service) {
+        service.increaseValue("Gas", 42);
+        service.increaseValue("Hot Water", 77);
+        service.increaseValue("Cold Water", 5);
+        service.increaseValue("Electricity", 9);
 
-        CounterService.plusOneToValue("electricity");
+        service.increment("electricity");
 
-        CounterService.resetValue("cold water");
-        CounterService.increaseValue("cold water", 42);
+        service.resetValue("cold water");
+        service.increaseValue("cold water", 42);
 
-        CounterService.increaseValue("Money", 1000);
+        service.increaseValue("Money", 1000);
     }
 
     private static void printCountersValue(Counter[] counters) {

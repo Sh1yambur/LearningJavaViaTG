@@ -5,9 +5,10 @@ public class Counter {
     private int value;
     private final String unit;
 
-    public Counter(String counterName, String unitName) {
-        this.name = counterName;
-        this.unit = unitName;
+    public Counter(String name, int value, String unit) {
+        this.name = name;
+        this.value = value;
+        this.unit = unit;
     }
 
     public String getName() {

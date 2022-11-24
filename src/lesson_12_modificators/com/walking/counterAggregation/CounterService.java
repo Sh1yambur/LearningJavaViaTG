@@ -5,29 +5,31 @@ import java.util.Arrays;
 public class CounterService {
     // log messages
     private static final boolean NEED_LOG = true;
+    private static final String ADD_NEW = "Added new counter \"%s\"(%s)";
     private static final String ALREADY_CONTENTS = "(!) Counter with name \"%s\" already contents in counter's list!";
     private static final String NOT_FOUND = "(!) Counter with name \"%s\" not found in counter's list!";
     private static final String NEW_VALUE = "\"%s\" value changed. New value: %s";
 
-    private static Counter[] COUNTERS = new Counter[0];
+    private Counter[] counters = new Counter[0];
 
-    public static Counter[] getAllCounters() {
-        return COUNTERS;
+    public Counter[] getAllCounters() {
+        return counters;
     }
 
-    public static void addCounter(Counter newCounter) {
+    public void addCounter(Counter newCounter) {
         if (newCounter != null) {
             if (!isContents(newCounter)) {
-                int oldLength = COUNTERS.length;
-                COUNTERS = Arrays.copyOf(COUNTERS, oldLength + 1);
-                COUNTERS[COUNTERS.length - 1] = newCounter;
+                int oldLength = counters.length;
+                counters = Arrays.copyOf(counters, oldLength + 1);
+                counters[counters.length - 1] = newCounter;
+                println(String.format(ADD_NEW, newCounter.getName(), newCounter.getValueAndUnit()));
             } else {
                 println(String.format(ALREADY_CONTENTS, newCounter.getName()));
             }
         }
     }
 
-    public static void addCounters(Counter... newCounters) {
+    public void addCounters(Counter... newCounters) {
         if (newCounters != null) {
             for (Counter c : newCounters) {
                 addCounter(c);
@@ -35,12 +37,14 @@ public class CounterService {
         }
     }
 
-    public static Counter getCounter(String counterName) {
+    public Counter getCounter(String counterName) {
         Counter result = null;
 
         if (counterName != null) {
             for (Counter c : getAllCounters()) {
-                if (c.getName().equalsIgnoreCase(counterName)) result = c;
+                if (c.getName().equalsIgnoreCase(counterName)) {
+                    result = c;
+                }
             }
         }
 
@@ -49,12 +53,8 @@ public class CounterService {
         return result;
     }
 
-    public static void increaseValue(String counterName, int increment) {
-        Counter counter = null;
-
-        if (counterName != null) {
-            counter = getCounter(counterName);
-        }
+    public void increaseValue(String counterName, int increment) {
+        Counter counter = getCounter(counterName);
 
         if (counter != null) {
             int oldValue = counter.getValue();
@@ -63,11 +63,11 @@ public class CounterService {
         }
     }
 
-    public static void plusOneToValue(String counterName) {
+    public void increment(String counterName) {
         increaseValue(counterName, 1);
     }
 
-    public static void resetValue(String counterName) {
+    public void resetValue(String counterName) {
         if (counterName != null) {
             Counter counter = getCounter(counterName);
             counter.setValue(0);
@@ -75,18 +75,18 @@ public class CounterService {
         }
     }
 
-    private static boolean isContents(Counter counter) {
+    private boolean isContents(Counter counter) {
         boolean result = false;
         for (Counter c : getAllCounters()) {
             if (c.getName().equals(counter.getName())) {
                 result = true;
-                break;
+                return result;
             }
         }
         return result;
     }
 
-    private static void println(String message) {
+    private void println(String message) {
         if (NEED_LOG) System.out.println(message);
     }
 }
