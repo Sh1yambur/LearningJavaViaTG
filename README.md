@@ -1,6 +1,6 @@
 # Дорогу осилит идущий. Java
 
-[Telegram канал](https://t.me/+relA0-qlUYAxZjI6)  |  [Админ в TG](https://t.me/ironicMotherfucker)
+[Telegram канал](https://t.me/+relA0-qlUYAxZjI6)  |  [Админ в Tg](https://t.me/ironicMotherfucker) | [GitHub с разбором заданий](https://github.com/KFalcon2022/practical-tasks)
 
 ## Содержание
 [Roadmap](https://t.me/c/1757251283/5)
@@ -30,7 +30,7 @@
 Методы. Varargs. Перегрузка методов. Первое знакомство с рекурсией
 
 [Урок 8](https://telegra.ph/Klassy-Obekty-Konstruktory-no-ne-Lego-i-klyuchevoe-slovo-this-11-17) |
-Классы. Объекты. Конструкторы (но не Lego) и ключевое слово this
+Классы. Объекты. Конструкторы и ключевое слово this
 
 [Урок 9](https://telegra.ph/Sistemy-kontrolya-versij-Git-Github-11-18) |
 Системы контроля версий. Git. Github
@@ -46,3 +46,9 @@
 
 [Урок 13](https://telegra.ph/Nasledovanie-Klyuchevoe-slovo-extends-i-ispolzovanie-protected-Klyuchevoe-slovo-super-Privedenie-ssylochnyh-tipov-11-23) |
 Наследование. Ключевое слово extends и использование protected. Ключевое слово super. Приведение ссылочных типов
+
+[Урок 14](https://telegra.ph/Polimorfizm-Pereopredelenie-metodov-Vidy-polimorfizma-i-svyazyvanie-11-25) |
+Полиморфизм. Переопределение методов. Виды полиморфизма и связывание
+
+[Урок 15](https://telegra.ph/GitHub-Fork-i-Pull-Request-11-25) | 
+GitHub. Fork и Pull Request
