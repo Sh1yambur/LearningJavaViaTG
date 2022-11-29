@@ -52,3 +52,9 @@
 
 [Урок 15](https://telegra.ph/GitHub-Fork-i-Pull-Request-11-25) | 
 GitHub. Fork и Pull Request
+
+[Урок 16](https://telegra.ph/Abstraktnye-klassy-i-interfejsy-11-28) |
+Абстрактные классы и интерфейсы
+
+[Урок 17](https://telegra.ph/Enumy-11-29) |
+Enum'ы
