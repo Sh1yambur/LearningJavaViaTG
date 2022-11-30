@@ -1,4 +1,4 @@
-package lesson_7_overloading_varargs;
+package lesson_07_overloading_varargs;
 
 /*
  * Реализовать методы «вычисления суммы» для всех примитивных типов, кроме void. Возвращать:

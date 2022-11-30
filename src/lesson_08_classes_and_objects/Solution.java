@@ -1,4 +1,4 @@
-package lesson_8_classes_and_objects;
+package lesson_08_classes_and_objects;
 
 public class Solution {
     public static void main(String[] args) {

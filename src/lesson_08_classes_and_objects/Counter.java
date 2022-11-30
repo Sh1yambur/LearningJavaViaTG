@@ -1,4 +1,4 @@
-package lesson_8_classes_and_objects;
+package lesson_08_classes_and_objects;
 
 /*
  * Реализовать класс-счетчик. Полями класса должны выступать название счетчика и, непосредственно, целочисленный счетчик.

@@ -1,4 +1,4 @@
-package lesson_7_overloading_varargs;
+package lesson_07_overloading_varargs;
 
 /*
 * Написать программу, которая объединяет любое количество строк, объединяя их через пробел.

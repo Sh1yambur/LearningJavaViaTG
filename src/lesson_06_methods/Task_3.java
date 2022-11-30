@@ -1,4 +1,4 @@
-package lesson_6_methods;
+package lesson_06_methods;
 
 public class Task_3 {
     public static void execute() {

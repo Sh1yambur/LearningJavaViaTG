@@ -1,4 +1,4 @@
-package lesson_7_overloading_varargs;
+package lesson_07_overloading_varargs;
 
 /*
  * Вычислите результат выражения, используя рекурсивный алгоритм.
