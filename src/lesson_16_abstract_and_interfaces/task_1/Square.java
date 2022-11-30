@@ -8,6 +8,6 @@ public class Square extends RegularShape{
 
     @Override
     public void draw() {
-        System.out.println("Draw Square with edge size " + this.dimension);
+        System.out.printf("Square with side's size %d is drawn\n", this.getDimension());
     }
 }
