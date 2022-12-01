@@ -1,12 +1,13 @@
 package lesson_13_inheritance.task_2;
 
-public class Cow extends Animal{
-    public void moo(){
-        System.out.println("moo");
+public class Cow extends Animal {
+    public static final String TYPE = "Cow";
+
+    public Cow() {
+        super(TYPE, "moo");
     }
 
-    @Override
-    public void say() {
-        moo();
+    public void moo() {
+        super.say();
     }
 }

@@ -58,3 +58,6 @@ GitHub. Fork и Pull Request
 
 [Урок 17](https://telegra.ph/Enumy-11-29) |
 Enum'ы
+
+[Урок 18](https://telegra.ph/Proverki-tipov-v-Java-11-30) |
+Проверки типов в Java
