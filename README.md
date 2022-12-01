@@ -61,3 +61,6 @@ Enum'ы
 
 [Урок 18](https://telegra.ph/Proverki-tipov-v-Java-11-30) |
 Проверки типов в Java
+
+[Урок 19](https://telegra.ph/Metody-klassa-Object-12-01) |
+Методы класса Object
