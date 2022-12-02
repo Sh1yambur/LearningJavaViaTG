@@ -64,3 +64,6 @@ Enum'ы
 
 [Урок 19](https://telegra.ph/Metody-klassa-Object-12-01) |
 Методы класса Object
+
+[Урок 20](https://telegra.ph/Isklyucheniya-12-01) |
+Исключения
