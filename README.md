@@ -67,3 +67,6 @@ Enum'ы
 
 [Урок 20](https://telegra.ph/Isklyucheniya-12-01) |
 Исключения
+
+[Урок 21](https://telegra.ph/Neizmenyaemye-obekty-12-02) |
+Неизменяемые объекты
