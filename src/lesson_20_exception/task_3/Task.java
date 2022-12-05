@@ -4,15 +4,11 @@ public class Task {
     public static void main(String[] args) {
         Animal[] animals = getMockAnimalsArray();
 
-        try {
-            for (int i = 0; i < animals.length; i++) {
-                if (animals[i] == null) {
-                    throw new ArrayValidationException("Not Animal object in index " + i);
-                }
-                getSound(animals[i]);
+        for (int i = 0; i < animals.length; i++) {
+            if (animals[i] == null) {
+                throw new ArrayValidationException(i);
             }
-        } catch (ArrayValidationException | UnknownAnimalException e) {
-            System.out.println(e.getMessage());
+            getSound(animals[i]);
         }
     }
 

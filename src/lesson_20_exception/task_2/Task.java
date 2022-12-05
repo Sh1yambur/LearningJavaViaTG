@@ -24,18 +24,13 @@ public class Task {
             return input;
         }
 
-        String result = null;
         for (Answerable msg : messages) {
             if (input.equalsIgnoreCase(msg.getQuestion())) {
-                result = input;
+                return input;
             }
         }
 
-        if (result == null) {
-            throw new InputValidationException(String.format("\"%s\" is wrong input", input));
-        }
-
-        return input;
+        throw new InputValidationException(String.format("\"%s\" is wrong input", input));
     }
 
     private static String getAnswer(String input) {

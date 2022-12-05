@@ -30,19 +30,13 @@ public class Task {
     }
 
     private static SimpleFile findFile(String targetFileName, SimpleFile[] fileSystem) throws FileNotFoundException {
-        SimpleFile result = null;
-
         for (SimpleFile file : fileSystem) {
             if (file.getName().equals(targetFileName)) {
-                result = file;
+                return file;
             }
         }
 
-        if (result == null) {
-            throw new FileNotFoundException("Searched file not exist");
-        }
-
-        return result;
+        throw new FileNotFoundException("Searched file not exist");
     }
 
     private static String inputFileName() {
