@@ -1,16 +1,20 @@
 package lesson_21_immutable.task_1;
 
 public final class Car {
-    private final String brand;
+    private final String brand; // one of unique id
+    private final int serialNumber; // one of unique id
+
     private final String model;
     private final int yearOfProduced;
-    private final int serialNumber;
+
+    private int hashCode;
 
     public Car(String brand, String model, int yearOfProduced, int serialNumber) {
         this.brand = brand;
         this.model = model;
         this.yearOfProduced = yearOfProduced;
         this.serialNumber = serialNumber;
+        this.hashCode = hashCode();
     }
 
     @Override
@@ -24,20 +28,18 @@ public final class Car {
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
 
-        return yearOfProduced == car.yearOfProduced &&
-                serialNumber == car.serialNumber &&
-                brand.equals(car.brand) &&
-                model.equals(car.model);
+        return serialNumber == car.serialNumber && brand.equals(car.brand);
     }
 
     @Override
     public int hashCode() {
-        int result = 1;
-        result = 31 * result + (brand == null ? 0 : brand.hashCode());
-        result = 31 * result + (model == null ? 0 : model.hashCode());
-        result = 31 * result + yearOfProduced;
-        result = 31 * result + serialNumber;
+        if (this.hashCode == 0) {
+            int result = 1;
+            result = 31 * result + serialNumber;
+            result = 31 * result + (brand == null ? 0 : brand.hashCode());
+            this.hashCode = result;
+        }
 
-        return result;
+        return this.hashCode;
     }
 }
