@@ -1,4 +1,4 @@
-package lesson_24_nested_classes.task_2_inner;
+package lesson_25_nested_classes.task_2_inner;
 
 public class Task {
     public static void main(String[] args) {

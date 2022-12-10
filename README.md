@@ -1,17 +1,20 @@
 # Дорогу осилит идущий. Java
 
-[Telegram канал](https://t.me/+relA0-qlUYAxZjI6)  |  [Админ в Tg](https://t.me/ironicMotherfucker) | [GitHub с разбором заданий](https://github.com/KFalcon2022/practical-tasks)
+[Telegram канал](https://t.me/+relA0-qlUYAxZjI6)  |  [Админ в Tg](https://t.me/ironicMotherfucker)
+| [GitHub с разбором заданий](https://github.com/KFalcon2022/practical-tasks)
 
 ## Содержание
+
 [Roadmap](https://t.me/c/1757251283/5)
 
-[Урок 0](https://telegra.ph/Nastrojka-okruzheniya-11-09-2) | 
+[Урок 0](https://telegra.ph/Nastrojka-okruzheniya-11-09-2) |
 Настройка окружения
 
 [Урок 1](https://telegra.ph/Bazovaya-struktura-programmy-peremennye-tipy-dannyh-i-vse-vse-vse-11-10) |
 Базовая структура программы, переменные, типы данных и все-все-все
 
-[Урок 2](https://telegra.ph/Konsolnyj-vvodvyvod-Arifmeticheskie-operacii-operacii-prisvoeniya-Uslovnye-vyrazheniya-11-11) |
+[Урок 2](https://telegra.ph/Konsolnyj-vvodvyvod-Arifmeticheskie-operacii-operacii-prisvoeniya-Uslovnye-vyrazheniya-11-11)
+|
 Консольный ввод/вывод. Арифметические операции, операции присвоения. Условные выражения
 
 [Урок 3](https://telegra.ph/Preobrazovanie-tipov-uslovnye-konstrukcii-i-nemnogo-o-strokah-11-11) |
@@ -44,13 +47,14 @@
 [Урок 12](https://telegra.ph/Inkapsulyaciya-Pakety-Modifikatory-dostupa-Gettery-i-Settery-11-22) |
 Инкапсуляция. Пакеты. Модификаторы доступа. Getter'ы и Setter'ы
 
-[Урок 13](https://telegra.ph/Nasledovanie-Klyuchevoe-slovo-extends-i-ispolzovanie-protected-Klyuchevoe-slovo-super-Privedenie-ssylochnyh-tipov-11-23) |
+[Урок 13](https://telegra.ph/Nasledovanie-Klyuchevoe-slovo-extends-i-ispolzovanie-protected-Klyuchevoe-slovo-super-Privedenie-ssylochnyh-tipov-11-23)
+|
 Наследование. Ключевое слово extends и использование protected. Ключевое слово super. Приведение ссылочных типов
 
 [Урок 14](https://telegra.ph/Polimorfizm-Pereopredelenie-metodov-Vidy-polimorfizma-i-svyazyvanie-11-25) |
 Полиморфизм. Переопределение методов. Виды полиморфизма и связывание
 
-[Урок 15](https://telegra.ph/GitHub-Fork-i-Pull-Request-11-25) | 
+[Урок 15](https://telegra.ph/GitHub-Fork-i-Pull-Request-11-25) |
 GitHub. Fork и Pull Request
 
 [Урок 16](https://telegra.ph/Abstraktnye-klassy-i-interfejsy-11-28) |
@@ -77,8 +81,14 @@ Enum'ы
 [Урок 23](https://telegra.ph/Pamyat-v-JVM-12-06) |
 Память в JVM
 
-[Урок 24](https://telegra.ph/Vlozhennye-klassy-12-08) |
+[Урок 24](https://telegra.ph/Garbage-Collector-12-07) |
+Garbage Collector
+
+[Урок 25](https://telegra.ph/Vlozhennye-klassy-12-08) |
 Вложенные классы
 
-[Урок 25](https://telegra.ph/Klassy-dlya-rabot-so-strokami-12-09) |
+[Урок 26](https://telegra.ph/Klassy-dlya-rabot-so-strokami-12-09) |
 Классы для работ со строками
+
+[Урок 27](https://telegra.ph/Otladka-koda-Debugger-12-09) |
+Отладка кода. Debugger

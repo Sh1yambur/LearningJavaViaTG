@@ -1,4 +1,4 @@
-package lesson_24_nested_classes.task_1_anonimous;
+package lesson_25_nested_classes.task_1_anonimous;
 
 import java.util.Scanner;
 

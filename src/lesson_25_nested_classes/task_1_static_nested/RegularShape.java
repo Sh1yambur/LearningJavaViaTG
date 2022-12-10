@@ -1,12 +1,8 @@
-package lesson_24_nested_classes.task_1_inner;
+package lesson_25_nested_classes.task_1_static_nested;
 
 public class RegularShape {
 
     private final int dimension;
-
-    public RegularShape() {
-        this.dimension = 0;
-    }
 
     public RegularShape(int dimension) {
         this.dimension = dimension;
@@ -20,10 +16,10 @@ public class RegularShape {
         System.out.println("Unknown shape");
     }
 
-    class Triangle extends RegularShape {
+    static class Triangle extends RegularShape {
 
-        public Triangle(int dimensions) {
-            super(dimensions);
+        public Triangle(int dimension) {
+            super(dimension);
         }
 
         @Override
@@ -33,7 +29,7 @@ public class RegularShape {
         }
     }
 
-    class Square extends RegularShape {
+    static class Square extends RegularShape {
 
         public Square(int dimension) {
             super(dimension);

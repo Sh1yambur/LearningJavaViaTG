@@ -1,4 +1,4 @@
-package lesson_24_nested_classes.task_1_static_nested;
+package lesson_25_nested_classes.task_1_inner;
 
 import java.util.Scanner;
 
@@ -17,10 +17,13 @@ public class Task {
     private static void printShape(String type, String dimensions) {
         int dim = Integer.parseInt(dimensions);
 
+        RegularShape triangle = new RegularShape().new Triangle(dim);
+        RegularShape square = new RegularShape().new Square(dim);
+
         switch (type) {
-            case "triangle" -> new RegularShape.Triangle(dim).draw();
-            case "square" -> new RegularShape.Square(dim).draw();
-            default -> new RegularShape(dim).draw();
+            case "triangle" -> triangle.draw();
+            case "square" -> square.draw();
+            default -> System.out.println("Unknown shape");
         }
     }
 }
