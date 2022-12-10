@@ -70,3 +70,15 @@ Enum'ы
 
 [Урок 21](https://telegra.ph/Neizmenyaemye-obekty-12-02) |
 Неизменяемые объекты
+
+[Урок 22](https://telegra.ph/Klassy-obertki-v-Java-12-05) |
+Классы-обертки в Java
+
+[Урок 23](https://telegra.ph/Pamyat-v-JVM-12-06) |
+Память в JVM
+
+[Урок 24](https://telegra.ph/Vlozhennye-klassy-12-08) |
+Вложенные классы
+
+[Урок 25](https://telegra.ph/Klassy-dlya-rabot-so-strokami-12-09) |
+Классы для работ со строками
