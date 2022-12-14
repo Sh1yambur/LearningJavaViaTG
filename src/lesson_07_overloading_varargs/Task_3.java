@@ -8,7 +8,6 @@ public class Task_3 {
         printFactInLoop(25);
     }
 
-    // todo: rewrite to BigInteger
     private static long getFactorial(int num) {
         if (num <= 1) return 1;
         return num * getFactorial(num - 1);

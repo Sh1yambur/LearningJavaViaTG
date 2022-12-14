@@ -92,3 +92,9 @@ Garbage Collector
 
 [Урок 27](https://telegra.ph/Otladka-koda-Debugger-12-09) |
 Отладка кода. Debugger
+
+[Урок 28](https://telegra.ph/Generics-CHast-I-12-12) |
+Generics. Часть I
+
+[Урок 29](https://telegra.ph/Generics-CHast-II-12-13) |
+Generics. Часть II
