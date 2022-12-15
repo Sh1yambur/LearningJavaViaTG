@@ -3,7 +3,7 @@ package lesson_28_generics_1.task_4;
 public class CustomList<T> {
     private Node<T> rootNode;
 
-    void add(T value) {
+    public void add(T value) {
         if (rootNode == null) {
             rootNode = new Node<>(value);
         } else {
@@ -13,7 +13,7 @@ public class CustomList<T> {
 
     public void delete(T value) {
         Node<T> delNode = findNodeByValue(value, rootNode);
-        Node<T> prevNode = getPreviousNode(rootNode, delNode);
+        Node<T> prevNode = getPreviousNode(delNode, rootNode);
         Node<T> nextNode = delNode.getNextNode();
 
         prevNode.setNextNode(nextNode);
@@ -65,7 +65,7 @@ public class CustomList<T> {
         return findNodeByValue(value, root.getNextNode());
     }
 
-    private Node<T> getPreviousNode(Node<T> node, Node<T> targetNode) {
+    private Node<T> getPreviousNode(Node<T> targetNode, Node<T> node) {
         if (node.getNextNode().equals(targetNode)) {
             return node;
         }
@@ -80,26 +80,26 @@ public class CustomList<T> {
     }
 
     private static class Node<T> {
-        private final T value;
-        private Node<T> nextNode;
+        final T value;
+        Node<T> nextNode;
 
-        private Node(T value) {
+        Node(T value) {
             this.value = value;
         }
 
-        private T getValue() {
+        T getValue() {
             return value;
         }
 
-        private Node<T> getNextNode() {
+        Node<T> getNextNode() {
             return nextNode;
         }
 
-        private void setNextNode(Node<T> nextNode) {
+        void setNextNode(Node<T> nextNode) {
             this.nextNode = nextNode;
         }
 
-        private boolean isLast() {
+        boolean isLast() {
             return nextNode == null;
         }
     }

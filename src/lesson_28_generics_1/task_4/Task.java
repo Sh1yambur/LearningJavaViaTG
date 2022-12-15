@@ -17,8 +17,8 @@ public class Task {
     public static void main(String[] args) {
         CustomList<String> list = new CustomList<>();
         //System.out.println(list.find("two"));
-        System.out.println(list.size());
-        System.out.println(list);
+        System.out.println(list.size()); // ==> 0
+        System.out.println(list); // ==> [...]
 
         list.add("one");
         String twoAsObj = new String("two");
@@ -26,16 +26,17 @@ public class Task {
         list.add("three");
         list.add("42");
 
-        System.out.println(list.size());
-        System.out.println(list);
+        System.out.println(list.size()); // ==> 4
+        System.out.println(list); // ==> [one, two, three, 42]
 
-        String twoStr = new String("two");
-        //System.out.println(list.find(twoStr));
+        System.out.println(list.find(twoAsObj)); // ==> two
 
-        list.delete(twoAsObj);
-        System.out.println(list.size());
-        System.out.println(list);
-        System.out.println(list.find(twoAsObj));
-        //list.delete("four");
+        list.delete("three");
+
+        System.out.println(list.size()); // ==> 3
+        System.out.println(list); // ==> [one, three, 42]
+
+        String twoAnother = new String("two");
+        System.out.println(list.find(twoAnother)); // ==> Exception
     }
 }
