@@ -21,22 +21,23 @@ public class Task {
         System.out.println(list); // ==> [...]
 
         list.add("one");
-        String twoAsObj = new String("two");
-        list.add(twoAsObj);
+        list.add("two");
         list.add("three");
-        list.add("42");
+        String fortyTwo = new String("42");
+        list.add(fortyTwo);
 
         System.out.println(list.size()); // ==> 4
         System.out.println(list); // ==> [one, two, three, 42]
 
-        System.out.println(list.find(twoAsObj)); // ==> two
+        System.out.println(list.find(fortyTwo)); // ==> 42
 
-        list.delete("three");
+        list.delete(fortyTwo);
+        list.delete("one");
 
-        System.out.println(list.size()); // ==> 3
-        System.out.println(list); // ==> [one, three, 42]
+        System.out.println(list.size()); // ==> 2
+        System.out.println(list); // ==> [two, three]
 
         String twoAnother = new String("two");
-        System.out.println(list.find(twoAnother)); // ==> Exception
+        System.out.println(list.find(twoAnother)); // ==> Exception "Value not exist"
     }
 }
