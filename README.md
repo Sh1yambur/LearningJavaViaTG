@@ -110,3 +110,9 @@ Generics. Часть II
 
 [Урок 33](https://telegra.ph/Rabota-s-fajlami-CHast-II-12-19) |
 Работа с файлами. Часть II
+
+[Урок 34](https://telegra.ph/Rabota-s-datami-i-vremenem-12-20) |
+Работа с датами и временем
+
+[Урок 35](https://telegra.ph/Kompilyaciya-i-interpretaciya-v-Java-12-20) |
+Компиляция и интерпретация в Java
