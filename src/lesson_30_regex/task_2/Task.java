@@ -43,10 +43,10 @@ public class Task {
 
     private static String checkName(String namePart, NameType nameType) {
         String regex = "";
-        switch (nameType) {
-            case FIRST -> regex = ""; // todo
-            case SECOND -> regex = ""; // todo
-            case LAST -> regex = ""; // todo
+        switch (nameType) { // todo
+            case FIRST -> regex = "";
+            case SECOND -> regex = "";
+            case LAST -> regex = "";
         }
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(namePart);
