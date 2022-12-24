@@ -9,13 +9,13 @@ package lesson_30_regex.task_2;
  * Если невалидна – бросьте из метода исключение, указывающее на ошибку валидации.
  */
 
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Task {
     private static final Scanner SC = new Scanner(System.in);
+    private static final String REGEX = "^[А-Я][а-я]+(-[А-Я][а-я]+)? ([А-Я][а-я]+)? ([А-Я][а-я]+)?$";
 
     public static void main(String[] args) {
         System.out.println(getFullName(getInput()));
@@ -28,33 +28,20 @@ public class Task {
 
     private static FullName getFullName(String input) {
         // replacing two or more spaces between words to one space
-        String[] nameParts = input.replaceAll("(\s)+", " ").split(" ");
-        System.out.println(Arrays.toString(nameParts));
-        if (nameParts.length != 3) {
-            throw new WrongNameException();
-        }
+        String name = input.replaceAll("( )+", " ");
 
-        return new FullName(
-                checkName(nameParts[0], NameType.FIRST),
-                checkName(nameParts[1], NameType.SECOND),
-                checkName(nameParts[2], NameType.LAST)
-        );
-    }
-
-    private static String checkName(String namePart, NameType nameType) {
-        String regex = "";
-        switch (nameType) { // todo
-            case FIRST -> regex = "";
-            case SECOND -> regex = "";
-            case LAST -> regex = "";
-        }
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(namePart);
-
-        if (matcher.matches()) {
-            return namePart;
+        if (checkName(name)){
+            String[] nameParts = name.split(" ");
+            return new FullName(nameParts[0], nameParts[1], nameParts[2]);
         } else {
             throw new WrongNameException();
         }
+    }
+
+    private static boolean checkName(String name) {
+        Pattern pattern = Pattern.compile(REGEX);
+        Matcher matcher = pattern.matcher(name);
+
+        return matcher.matches();
     }
 }
