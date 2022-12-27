@@ -23,7 +23,11 @@ import java.util.StringJoiner;
 
 public class Task {
     private static final File FILE = new File("./resource/task_30/text.txt");
-    private static final String TEXT = readText();
+    private static final String TEXT = readTextFromFile();
+
+    private static final String PARAGRAPH_SPLIT = System.lineSeparator();
+    private static final String SENTENCE_SPLIT = "[.]|[?]|!|[?!]|[.]{3}";
+    private static final String WORD_SPLIT = "(, )|( - )|(: )";
 
     public static void main(String[] args) {
         System.out.println(getNormalizeText(TEXT));
@@ -32,41 +36,30 @@ public class Task {
     private static String getNormalizeText(String text) {
         StringBuilder builder = new StringBuilder();
 
-        for (String prg : getParagraphs(text)) {
+        String[] paragraphs = text.split(PARAGRAPH_SPLIT);
 
-            for (String snt : getSentences(prg)) {
-                String[] wrd = getWords(snt);
+        for (String prg : paragraphs) {
+            String[] sentences = prg.split(SENTENCE_SPLIT);
 
-                for (int i = 0; i < wrd.length; i++) {
-                    builder.append(wrd[i]);
+            for (String snt : sentences) {
+                String[] words = snt.trim().split(WORD_SPLIT);
 
-                    if (i == wrd.length - 1) {
+                for (int i = 0; i < words.length; i++) {
+                    builder.append(words[i]);
+
+                    if (i == words.length - 1) {
                         builder.append(". ");
                     } else {
                         builder.append(" ");
                     }
                 }
-
             }
-
         }
 
         return builder.toString();
     }
 
-    private static String[] getParagraphs(String str) {
-        return str.split(System.lineSeparator());
-    }
-
-    private static String[] getSentences(String str) {
-        return str.split("\n|[.]|[?]|!|[?!]|[.]{3}");
-    }
-
-    private static String[] getWords(String str) {
-        return str.trim().split("(, )|( - )|(: )");
-    }
-
-    private static String readText() {
+    private static String readTextFromFile() {
         StringJoiner joiner = new StringJoiner(System.lineSeparator());
 
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE))) {

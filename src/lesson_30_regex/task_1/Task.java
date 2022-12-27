@@ -26,6 +26,7 @@ public class Task {
         System.out.println(isPhoneNumber("+7(900)1234567")); // ==> true
     }
 
+    // hard way solution
     private static boolean isPhoneNumber(String number) {
         String regex = "^(\\+7)( )?[(]?\\d{3}[)]?( )?\\d{3}( ?-?)?\\d{2}( ?-?)?\\d{2}$";
         Pattern pattern = Pattern.compile(regex);

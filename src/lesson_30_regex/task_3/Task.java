@@ -27,12 +27,12 @@ public class Task {
     private static int getUniqueWordsCount(String input) {
         int count = 0;
 
-        String fullString = input.trim().replaceAll("(\\s)+", " ");
+        String fullString = input.trim().toLowerCase().replaceAll("(\\s)+", " ");
         String[] words = fullString.split(" ");
         StringJoiner joiner = new StringJoiner(", ");
 
         for (String word : words) {
-            if (isWord(word) && !joiner.toString().contains(word)) {
+            if (isValidWord(word) && !joiner.toString().contains(word)) {
                 joiner.add(word);
                 count++;
             }
@@ -41,11 +41,11 @@ public class Task {
         return count;
     }
 
-    private static boolean isWord(String str) {
+    private static boolean isValidWord(String str) {
         if (PATTERN.matcher(str).matches()) {
             return true;
         }
-        throw new IncorrectWordException();
+        throw new InvalidWordException();
     }
 
     private static String getInput() {

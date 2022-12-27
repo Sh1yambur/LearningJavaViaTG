@@ -30,15 +30,15 @@ public class Task {
         // replacing two or more spaces between words to one space
         String name = input.replaceAll("( )+", " ");
 
-        if (checkName(name)){
+        if (isValidName(name)){
             String[] nameParts = name.split(" ");
             return new FullName(nameParts[0], nameParts[1], nameParts[2]);
         } else {
-            throw new WrongNameException();
+            throw new InvalidNameException();
         }
     }
 
-    private static boolean checkName(String name) {
+    private static boolean isValidName(String name) {
         Pattern pattern = Pattern.compile(REGEX);
         Matcher matcher = pattern.matcher(name);
 
