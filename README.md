@@ -116,3 +116,9 @@ Generics. Часть II
 
 [Урок 35](https://telegra.ph/Kompilyaciya-i-interpretaciya-v-Java-12-20) |
 Компиляция и интерпретация в Java
+
+[Урок 36](https://telegra.ph/Collections-Framework-01-10) |
+Collections Framework
+
+[Урок 37](https://telegra.ph/Collection-Spisok-ArrayList-01-12) |
+Collection. Список. ArrayList
