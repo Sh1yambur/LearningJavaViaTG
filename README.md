@@ -123,7 +123,7 @@ Collections Framework
 [Урок 37](https://telegra.ph/Collection-Spisok-ArrayList-01-12) |
 Collection. Список. ArrayList
 
-[Урок 38](https://telegra.ph/Mehanizmy-sravneniya-Comparable-i-Comparator-01-14)
+[Урок 38](https://telegra.ph/Mehanizmy-sravneniya-Comparable-i-Comparator-01-14) |
 Механизмы сравнения. Comparable и Comparator
 
 [Урок 39](https://telegra.ph/Queue-i-variacii-na-temu-CHast-I-Struktury-dannyh-01-17) |
