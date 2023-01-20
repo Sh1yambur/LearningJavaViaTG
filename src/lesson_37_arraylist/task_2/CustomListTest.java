@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-public class CustomStackTest {
+public class CustomListTest {
     CustomStack<String> stack;
     String one = "One";
     String two = "Two";

@@ -128,3 +128,6 @@ Collection. Список. ArrayList
 
 [Урок 39](https://telegra.ph/Queue-i-variacii-na-temu-CHast-I-Struktury-dannyh-01-17) |
 Queue и вариации на тему. Часть I. Структуры данных
+
+[Урок 40](https://telegra.ph/Queue-i-variacii-na-temu-CHast-II-Implementacii-v-Java-01-19) |
+Queue и вариации на тему. Часть II. Имплементации в Java
