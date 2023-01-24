@@ -12,6 +12,35 @@ public class CustomList<T> {
         size++;
     }
 
+    public T get(int index) {
+        return getNode(index).value;
+    }
+
+    private Node<T> getNode(int index) {
+        int currentIndex = size - 1;
+
+        Node<T> currentNode = top;
+        while (currentNode != null) {
+            if (currentIndex == index) {
+                return currentNode;
+            }
+            currentNode = currentNode.next;
+            currentIndex--;
+        }
+
+        throw new NoSuchElementException();
+    }
+
+    public void add(int index, T value) {
+        Node<T> replacedNode = getNode(index);
+        replacedNode.next = new Node<>(value, replacedNode.next);
+        size++;
+    }
+
+    public void set(int index, T value) {
+        getNode(index).value = value;
+    }
+
     public void remove(T target) {
         if (top.value.equals(target)) {
             top = top.next;
@@ -30,6 +59,16 @@ public class CustomList<T> {
         }
 
         throw new NoSuchElementException();
+    }
+
+    public void remove(int index) {
+        Node<T> removedNode = getNode(index);
+        if (index == size - 1) {
+            top = top.next;
+        } else {
+            getNode(index + 1).next = removedNode.next;
+        }
+        size--;
     }
 
     public int size() {
@@ -60,56 +99,6 @@ public class CustomList<T> {
 
         return "[%s]".formatted(joiner);
     }
-
-    public T pollLast() {
-        if (top == null) {
-            throw new NoSuchElementException();
-        }
-
-        T result = top.value;
-        top = top.next;
-        size--;
-
-        return result;
-    }
-
-    /*@SuppressWarnings("unchecked")
-    public void reverse() {
-        T[] array = (T[]) new Object[size];
-
-        int index = size - 1;
-        Node<T> current = top;
-        while (current != null) {
-            array[index] = current.value;
-            index--;
-            current = current.next;
-        }
-
-        index = 0;
-        current = top;
-        while (index < size) {
-            current.value = array[index];
-            current = current.next;
-            index++;
-        }
-    }*/
-
-    /*public void removeElementsWithEvenHash() {
-        Node<T> removal = null;
-        Node<T> current = top;
-
-        while (current != null) {
-            if (current.value.hashCode() % 2 == 0) {
-                removal = current;
-            }
-            current = current.next;
-
-            if (removal != null) {
-                remove(removal.value);
-                removal = null;
-            }
-        }
-    }*/
 
     private static class Node<T> {
         T value;

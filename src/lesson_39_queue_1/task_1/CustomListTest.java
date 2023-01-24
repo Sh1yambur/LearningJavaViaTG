@@ -66,35 +66,48 @@ public class CustomListTest {
     }
 
     @Test(expected = NoSuchElementException.class)
-    public void pollLast() {
-        assertEquals(four, list.pollLast());
-        assertEquals(3, list.size());
-        assertEquals("[Three -> Two -> One]", list.toString());
-
-        list.pollLast();
-        list.pollLast();
-        assertEquals(one, list.pollLast());
-        assertEquals(0, list.size());
-        assertEquals("[]", list.toString());
-
-        list.pollLast(); // expecting exception
+    public void get() {
+        assertEquals(four, list.get(3));
+        assertEquals(one, list.get(0));
+        list.get(4); // expecting exception
     }
 
-    /*@Test
-    public void reverse() {
-        list.reverse();
-        assertEquals("[One -> Two -> Three -> Four]", list.toString());
-    }*/
+    @Test(expected = NoSuchElementException.class)
+    public void addByIndex() {
+        list.add(0, new Element("Zero"));
+        assertEquals("[Four -> Three -> Two -> One -> Zero]", list.toString());
+        assertEquals(5, list.size());
 
-    /*@Test
-    public void removeElementsWithEvenHash() {
-        list.add(new Element("seven")); // 109330445
-        list.add(new Element("eight")); // 96505999
-        list.add(new Element("ten")); // 114717
+        list.add(4, new Element("Three&Half"));
+        assertEquals("[Four -> Three&Half -> Three -> Two -> One -> Zero]", list.toString());
+        assertEquals(6, list.size());
 
-        list.removeElementsWithEvenHash();
-        assertEquals("[ten -> eight -> seven]", list.toString());
-    }*/
+        list.add(6, new Element("Five")); // expecting exception
+    }
+
+    @Test(expected = NoSuchElementException.class)
+    public void set() {
+        list.set(0, new Element("Zero"));
+        assertEquals("[Four -> Three -> Two -> Zero]", list.toString());
+        assertEquals(4, list.size());
+
+        list.set(3, new Element("4"));
+        assertEquals("[4 -> Three -> Two -> Zero]", list.toString());
+
+        list.set(4, new Element("five")); // expecting exception
+    }
+
+    @Test(expected = NoSuchElementException.class)
+    public void removeByIndex() {
+        list.remove(0);
+        assertEquals("[Four -> Three -> Two]", list.toString());
+        assertEquals(3, list.size());
+
+        list.remove(3);
+        assertEquals("Three -> Two]", list.toString());
+
+        list.remove(3); // expecting exception
+    }
 
     private static class Element {
         String value;

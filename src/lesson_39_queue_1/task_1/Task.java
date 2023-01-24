@@ -13,40 +13,32 @@ public class Task {
 
         removeElementsWithEvenHash(list);
         System.out.println(list);
+
     }
 
-    @SuppressWarnings("unchecked")
     private static <T> void reverseList(CustomList<T> originList) {
-        T[] array = (T[]) new Object[originList.size()];
-        int count = 0;
+        int start = 0;
+        int end = originList.size() - 1;
 
-        while (originList.size() != 0) {
-            T element = originList.pollLast();
-            count++;
-            array[count - 1] = element;
-        }
-
-        for (int i = 0; i < count; i++) {
-            originList.add(array[i]);
+        while(start < end){
+            T first = originList.get(start);
+            T last = originList.get(end);
+            originList.set(start, last);
+            originList.set(end, first);
+            start++;
+            end--;
         }
     }
 
-    @SuppressWarnings("unchecked")
     private static <T> void removeElementsWithEvenHash(CustomList<T> originList) {
-        T[] array = (T[]) new Object[originList.size()];
-        int count = 0;
+        int size = originList.size();
 
-        while (originList.size() != 0) {
-            T element = originList.pollLast();
-
-            if (element.hashCode() % 2 != 0) {
-                count++;
-                array[count - 1] = element;
+        for (int i = 0; i < size; i++) {
+            if(originList.get(i).hashCode() % 2 == 0){
+                originList.remove(i);
+                i--;
+                size--;
             }
-        }
-
-        for (int i = count - 1; i >= 0; i--) {
-            originList.add(array[i]);
         }
     }
 }
