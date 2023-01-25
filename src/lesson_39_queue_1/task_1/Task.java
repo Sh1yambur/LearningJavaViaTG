@@ -13,7 +13,6 @@ public class Task {
 
         removeElementsWithEvenHash(list);
         System.out.println(list);
-
     }
 
     private static <T> void reverseList(CustomList<T> originList) {

@@ -131,3 +131,6 @@ Queue и вариации на тему. Часть I. Структуры дан
 
 [Урок 40](https://telegra.ph/Queue-i-variacii-na-temu-CHast-II-Implementacii-v-Java-01-19) |
 Queue и вариации на тему. Часть II. Имплементации в Java
+
+[Урок 41](https://telegra.ph/Set-Pervoe-znakomstvo-01-25) |
+Set. Первое знакомство

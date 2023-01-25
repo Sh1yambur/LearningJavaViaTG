@@ -4,11 +4,30 @@ import java.util.NoSuchElementException;
 import java.util.StringJoiner;
 
 public class CustomList<T> {
-    private Node<T> top;
+    private Node<T> first;
+    private Node<T> last;
     private int size = 0;
 
     public void add(T value) {
-        top = new Node<>(value, top);
+        if (first == null) {
+            first = new Node<>(value, null);
+            last = first;
+        } else {
+            last.next = new Node<>(value, null);
+            last = last.next;
+        }
+        size++;
+    }
+
+    public void add(int index, T value) {
+        if (index == 0) {
+            first = new Node<>(value, first);
+        } else {
+            Node<T> previous = getNode(index - 1);
+            Node<T> replaced = getNode(index);
+            previous.next = new Node<>(value, replaced);
+        }
+
         size++;
     }
 
@@ -17,24 +36,18 @@ public class CustomList<T> {
     }
 
     private Node<T> getNode(int index) {
-        int currentIndex = size - 1;
+        int currentIndex = 0;
 
-        Node<T> currentNode = top;
+        Node<T> currentNode = first;
         while (currentNode != null) {
             if (currentIndex == index) {
                 return currentNode;
             }
             currentNode = currentNode.next;
-            currentIndex--;
+            currentIndex++;
         }
 
         throw new NoSuchElementException();
-    }
-
-    public void add(int index, T value) {
-        Node<T> replacedNode = getNode(index);
-        replacedNode.next = new Node<>(value, replacedNode.next);
-        size++;
     }
 
     public void set(int index, T value) {
@@ -42,13 +55,19 @@ public class CustomList<T> {
     }
 
     public void remove(T target) {
-        if (top.value.equals(target)) {
-            top = top.next;
+        if (first.value.equals(target)) {
+            first = first.next;
             size--;
             return;
         }
 
-        Node<T> current = top;
+        if (last.value.equals(target)) {
+            last = getNode(size - 2);
+            size--;
+            return;
+        }
+
+        Node<T> current = first;
         while (current.next != null) {
             if (current.next.value.equals(target)) {
                 current.next = current.next.next;
@@ -63,10 +82,12 @@ public class CustomList<T> {
 
     public void remove(int index) {
         Node<T> removedNode = getNode(index);
-        if (index == size - 1) {
-            top = top.next;
+        if (index == 0) {
+            first = first.next;
+        } else if (index == size - 1) {
+            last = getNode(size - 2);
         } else {
-            getNode(index + 1).next = removedNode.next;
+            getNode(index - 1).next = removedNode.next;
         }
         size--;
     }
@@ -76,7 +97,7 @@ public class CustomList<T> {
     }
 
     public T find(T target) {
-        Node<T> current = top;
+        Node<T> current = first;
 
         while (current != null) {
             if (current.value.equals(target)) {
@@ -91,7 +112,7 @@ public class CustomList<T> {
     @Override
     public String toString() {
         StringJoiner joiner = new StringJoiner(" -> ");
-        Node<T> current = top;
+        Node<T> current = first;
         while (current != null) {
             joiner.add(current.toString());
             current = current.next;
