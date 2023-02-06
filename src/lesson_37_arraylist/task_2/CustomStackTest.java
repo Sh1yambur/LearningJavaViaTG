@@ -1,12 +1,13 @@
 package lesson_37_arraylist.task_2;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.Iterator;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class CustomStackTest {
     CustomStack<String> stack;
@@ -18,7 +19,7 @@ public class CustomStackTest {
     String[] strings = {one, two, three, fortyTwo};
     String[] revertStrings = {fortyTwo, three, two, one};
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         stack = new CustomStack<>();
 

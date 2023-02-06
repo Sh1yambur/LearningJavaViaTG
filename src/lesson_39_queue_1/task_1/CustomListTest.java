@@ -1,13 +1,13 @@
 package lesson_39_queue_1.task_1;
 
-// TODO go to JUnit ver.5
-
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
 
 import java.util.NoSuchElementException;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CustomListTest {
     CustomList<Element> list;
@@ -19,8 +19,8 @@ public class CustomListTest {
 
     Element fortyTwo = new Element("FortyTwo");
 
-    @Before
-    public void setUp() throws Exception {
+    @BeforeEach
+    public void setUp() {
         list = new CustomList<>();
 
         list.add(one);
@@ -48,7 +48,7 @@ public class CustomListTest {
         assertEquals("[One -> Two -> Three -> Four -> FortyTwo]", list.toString());
     }
 
-    @Test(expected = NoSuchElementException.class)
+    @Test
     public void addByIndex() {
         list.add(0, new Element("Zero"));
         assertEquals("[Zero -> One -> Two -> Three -> Four]", list.toString());
@@ -58,19 +58,23 @@ public class CustomListTest {
         assertEquals("[Zero -> One -> Two -> Three -> ThreeAndHalf -> Four]", list.toString());
         assertEquals(6, list.size());
 
-        list.add(6, new Element("Five")); // expecting exception
+        list.add(6, fortyTwo);
+        assertEquals("[Zero -> One -> Two -> Three -> ThreeAndHalf -> Four -> FortyTwo]", list.toString());
+        assertEquals(7, list.size());
+
+        assertThrows(NoSuchElementException.class, () -> list.add(8, new Element("Five")));
     }
 
-    @Test(expected = NoSuchElementException.class)
+    @Test
     public void get() {
         assertEquals(four, list.get(3));
 
         assertEquals(one, list.get(0));
 
-        list.get(4); // expecting exception
+        assertThrows(NoSuchElementException.class, () -> list.get(4));
     }
 
-    @Test(expected = NoSuchElementException.class)
+    @Test
     public void set() {
         list.set(0, new Element("Zero"));
         assertEquals("[Zero -> Two -> Three -> Four]", list.toString());
@@ -79,10 +83,10 @@ public class CustomListTest {
         list.set(3, new Element("4"));
         assertEquals("[Zero -> Two -> Three -> 4]", list.toString());
 
-        list.set(4, new Element("five")); // expecting exception
+        assertThrows(NoSuchElementException.class, () -> list.set(4, new Element("five")));
     }
 
-    @Test(expected = NoSuchElementException.class)
+    @Test
     public void remove() {
         list.remove(one);
         assertEquals(3, list.size());
@@ -92,10 +96,16 @@ public class CustomListTest {
         assertEquals(2, list.size());
         assertEquals("[Two -> Three]", list.toString());
 
-        list.remove(fortyTwo); // expecting exception
+        assertThrows(NoSuchElementException.class, () -> list.remove(fortyTwo));
+
+        list.remove(three);
+        list.remove(two);
+        assertEquals("[]", list.toString());
+
+        assertThrows(NoSuchElementException.class, () -> list.remove(fortyTwo));
     }
 
-    @Test(expected = NoSuchElementException.class)
+    @Test
     public void removeByIndex() {
         list.remove(0);
         assertEquals("[Two -> Three -> Four]", list.toString());
@@ -104,21 +114,26 @@ public class CustomListTest {
         list.remove(2);
         assertEquals("[Two -> Three]", list.toString());
 
-        list.remove(3); // expecting exception
+        list.remove(0);
+        list.remove(0);
+        assertEquals(0, list.size());
+        assertEquals("[]", list.toString());
+
+        assertThrows(NoSuchElementException.class, () -> list.remove(3));
     }
 
-    @Test(expected = NoSuchElementException.class)
+    @Test
     public void find() {
         assertEquals(one, list.find(one));
 
         list.add(fortyTwo);
         assertEquals(fortyTwo, list.find(fortyTwo));
 
-        list.find(new Element("Five")); // expecting exception
+        assertThrows(NoSuchElementException.class, () -> list.find(new Element("Five")));
     }
 
     @Test
-    public void removeAndAdd(){
+    public void removeAndAdd() {
         list.remove(3);
         assertEquals(3, list.size());
         list.add(fortyTwo);
@@ -130,7 +145,8 @@ public class CustomListTest {
         assertEquals("[One -> Two -> Three -> Five]", list.toString());
     }
 
-    private static class Element {
+    @Nested
+    public class Element {
         String value;
 
         public Element(String value) {

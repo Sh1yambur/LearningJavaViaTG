@@ -134,3 +134,9 @@ Queue и вариации на тему. Часть II. Имплементаци
 
 [Урок 41](https://telegra.ph/Set-Pervoe-znakomstvo-01-25) |
 Set. Первое знакомство
+
+[Урок 42](https://telegra.ph/Struktura-dannyh-Derevo-01-28) |
+Структура данных Дерево
+
+[Урок 43](https://telegra.ph/Map-Pervoe-znakomstvo-02-01) |
+Map. Первое знакомство
