@@ -5,7 +5,7 @@ import java.util.StringJoiner;
 
 public class CustomList<T> {
     private Node<T> first;
-    public Node<T> last;
+    private Node<T> last;
     private int size = 0;
 
     public void add(T value) {
@@ -36,6 +36,22 @@ public class CustomList<T> {
 
     public T get(int index) {
         return getNode(index).value;
+    }
+
+    public T getFirst() {
+        if (first == null) {
+            throw new NoSuchElementException();
+        } else {
+            return first.value;
+        }
+    }
+
+    public T getLast() {
+        if (last == null) {
+            throw new NoSuchElementException();
+        } else {
+            return last.value;
+        }
     }
 
     private Node<T> getNode(int index) {

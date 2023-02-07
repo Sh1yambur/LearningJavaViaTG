@@ -75,6 +75,22 @@ public class CustomListTest {
     }
 
     @Test
+    void getFirst() {
+        assertEquals(one, list.getFirst());
+
+        list.add(0, fortyTwo);
+        assertEquals(fortyTwo, list.getFirst());
+    }
+
+    @Test
+    void getLast() {
+        assertEquals(four, list.getLast());
+
+        list.add(fortyTwo);
+        assertEquals(fortyTwo, list.getLast());
+    }
+
+    @Test
     public void set() {
         list.set(0, new Element("Zero"));
         assertEquals("[Zero -> Two -> Three -> Four]", list.toString());
