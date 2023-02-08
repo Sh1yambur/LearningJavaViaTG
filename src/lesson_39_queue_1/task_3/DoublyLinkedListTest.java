@@ -76,8 +76,14 @@ class DoublyLinkedListTest {
 
     @Test
     void getFirst() {
-        list.addFirst(fortyTwo);
-        assertEquals(fortyTwo, list.getFirst());
+        assertEquals(one, list.getFirst());
+
+        for (int i = 0; i < 4; i++) {
+            Element el = list.getFirst();
+            list.remove(el);
+        }
+
+        assertThrows(NoSuchElementException.class, () -> list.getFirst());
     }
 
     @Test
