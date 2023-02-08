@@ -4,7 +4,7 @@ public class Task {
     public static void main(String[] args) {
         CustomList<String> list = new CustomList<>();
         for (int i = 0; i < 10; i++) {
-            list.add("{" + i + "}");
+            list.add("(" + i + ")");
         }
         System.out.println(list);
 
