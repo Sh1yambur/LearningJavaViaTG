@@ -8,7 +8,7 @@ public class DoublyLinkedList<T> {
     private Node<T> last;
     private int size;
 
-    void addFirst(T value) {
+    public void addFirst(T value) {
         if (first == null) {
             first = new Node<>(value, null, null);
             last = first;
@@ -20,7 +20,7 @@ public class DoublyLinkedList<T> {
         size++;
     }
 
-    void addLast(T value) {
+    public void addLast(T value) {
         if (first == null) {
             first = new Node<>(value, null, null);
             last = first;
@@ -37,7 +37,7 @@ public class DoublyLinkedList<T> {
     }
 
     public T getFirst() {
-        if (first.value == null) {
+        if (first == null) {
             throw new NoSuchElementException();
         } else {
             return first.value;
@@ -45,7 +45,7 @@ public class DoublyLinkedList<T> {
     }
 
     public T getLast() {
-        if (last.value == null) {
+        if (last == null) {
             throw new NoSuchElementException();
         } else {
             return last.value;
@@ -67,7 +67,7 @@ public class DoublyLinkedList<T> {
         throw new NoSuchElementException();
     }
 
-    void remove(T target) {
+    public void remove(T target) {
         if (first.value.equals(target)) {
             if (first.next != null) {
                 first = first.next;
