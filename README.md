@@ -140,3 +140,6 @@ Set. Первое знакомство
 
 [Урок 43](https://telegra.ph/Map-Pervoe-znakomstvo-02-01) |
 Map. Первое знакомство
+
+[Урок 44](https://telegra.ph/Slozhnost-algoritmov-Pervoe-znakomstvo-02-08) |
+Сложность алгоритмов. Первое знакомство
