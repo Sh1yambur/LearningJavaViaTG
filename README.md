@@ -141,5 +141,14 @@ Set. Первое знакомство
 [Урок 43](https://telegra.ph/Map-Pervoe-znakomstvo-02-01) |
 Map. Первое знакомство
 
-[Урок 44](https://telegra.ph/Slozhnost-algoritmov-Pervoe-znakomstvo-02-08) |
+[Урок 44](https://telegra.ph/Map-Vnutrennee-ustrojstvo-realizacij-02-04) |
+Map. Внутреннее устройство реализаций
+
+[Урок 45](https://telegra.ph/Slozhnost-algoritmov-Pervoe-znakomstvo-02-08) |
 Сложность алгоритмов. Первое знакомство
+
+[Урок 46](https://telegra.ph/Funkcionalnye-interfejsy-i-lyambda-vyrazheniya-02-10) |
+Функциональные интерфейсы и лямбда-выражения
+
+[Урок 47](https://telegra.ph/Ssylka-na-metod-02-12) |
+Ссылка на метод
