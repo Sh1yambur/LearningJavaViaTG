@@ -152,3 +152,6 @@ Map. Внутреннее устройство реализаций
 
 [Урок 47](https://telegra.ph/Ssylka-na-metod-02-12) |
 Ссылка на метод
+
+[Урок 48](https://telegra.ph/Funkcionalnoe-programmirovanie-v-Java-02-14) |
+Функциональное программирование в Java
