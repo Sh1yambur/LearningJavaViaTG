@@ -12,6 +12,7 @@ public class CarService {
     }
 
     public void addCar(Car car) {
+        // hashcode as unique car id number
         carsCollection.put(car.getHashCode(), car);
     }
 

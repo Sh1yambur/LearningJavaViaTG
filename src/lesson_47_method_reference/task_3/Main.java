@@ -20,20 +20,20 @@ public class Main {
     }
 
     private static Car[] getMockCars() {
-        Car car0 = new Car("Honda", "Civic", 2008, 56456456);
-        Car car1 = new Car("Toyota", "Hilux", 2017, 248466145);
-        Car car2 = new Car("Ford", "F-150", 2010, 44564361);
-        Car car3 = new Car("Volkswagen", "Golf", 2000, 44187896);
-        Car car4 = new Car("Chevrolet", "Impala", 1980, 56456456);
-
-        return new Car[]{car0, car1, car2, car3, car4};
+        return new Car[]{
+                new Car("Honda", "Civic", 2008, 56456456),
+                new Car("Toyota", "Hilux", 2017, 248466145),
+                new Car("Ford", "F-150", 2010, 44564361),
+                new Car("Volkswagen", "Golf", 2000, 44187896),
+                new Car("Chevrolet", "Impala", 1980, 56456456)
+        };
     }
 
     private static void loop() {
         boolean isExecuting = true;
 
         while (isExecuting) {
-            printTokenInfo();
+            printTokensInfo();
             String token = getInput(" token");
 
             if (token.equalsIgnoreCase("q")) {
@@ -52,7 +52,7 @@ public class Main {
             // some logic of validate correct input (e.g. add regex field to the Filter-class and comparing it)
 
             System.out.println("\t===== Found this =====");
-            CAR_SERVICE.findCars(filter, target).forEach(car -> System.out.printf("%s%n", car));
+            CAR_SERVICE.findCars(filter, target).forEach(System.out::println);
             System.out.println("\t======================");
         }
     }
@@ -69,7 +69,7 @@ public class Main {
         );
     }
 
-    private static void printTokenInfo() {
+    private static void printTokensInfo() {
         System.out.println("Input type of search as one of:");
         FILTER_SERVICE.getAll().forEach((t, f) -> System.out.printf("[%s] - %s%n", t, f.info()));
         System.out.println("or\n[q] - for quit search");
