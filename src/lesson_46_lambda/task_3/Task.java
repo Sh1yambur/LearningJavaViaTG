@@ -73,7 +73,6 @@ public class Task {
             });
             default -> List.of();
         };
-
     }
 
     private static int[] foundYears(String input) {

@@ -1,8 +1,8 @@
-package lesson_46_lambda.task_3;
+package lesson_47_method_reference.task_3;
 
 public final class Car {
-    private final String brand;
-    private final int serialNumber;
+    private final String brand;         // brand is unique among other car manufacturers
+    private final int serialNumber;     // SN is unique within a single manufacturer
 
     private final String model;
     private final int yearOfProduced;
