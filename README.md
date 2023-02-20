@@ -155,3 +155,6 @@ Map. Внутреннее устройство реализаций
 
 [Урок 48](https://telegra.ph/Funkcionalnoe-programmirovanie-v-Java-02-14) |
 Функциональное программирование в Java
+
+[Урок 49](https://telegra.ph/Klass-Optional-ili-horoshuyu-veshch-monadoj-ne-nazovut-02-18) |
+Класс Optional или «хорошую вещь монадой не назовут»
