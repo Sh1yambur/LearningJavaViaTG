@@ -1,9 +1,10 @@
-package lesson_43_map.task_2;
+package lesson_49_optional.task_1;
 
 import java.util.HashMap;
+import java.util.Optional;
 
 public class CarService {
-    private final HashMap<String,Car> carsMap;
+    private final HashMap<String, Car> carsMap;
 
     public CarService(Car[] cars) {
         carsMap = new HashMap<>();
@@ -15,7 +16,7 @@ public class CarService {
         }
     }
 
-    public Car findCar(Car target){
-        return carsMap.get(target.getNumber());
+    public Optional<Car> findCar(Car target) {
+        return Optional.ofNullable(carsMap.get(target.getNumber()));
     }
 }
