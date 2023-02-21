@@ -1,18 +1,17 @@
 package lesson_47_method_reference.task_3;
 
 public final class Car {
-    private final String brand;         // brand is unique among other car manufacturers
-    private final int serialNumber;     // SN is unique within a single manufacturer
-
+    private final String brand;
+    private final int serialNumber;
     private final String model;
-    private final int yearOfProduced;
+    private final int producedYear;
 
     private int hashCode;
 
-    public Car(String brand, String model, int yearOfProduced, int serialNumber) {
+    public Car(String brand, String model, int producedYear, int serialNumber) {
         this.brand = brand;
         this.model = model;
-        this.yearOfProduced = yearOfProduced;
+        this.producedYear = producedYear;
         this.serialNumber = serialNumber;
         this.hashCode = hashCode();
     }
@@ -29,8 +28,8 @@ public final class Car {
         return model;
     }
 
-    public int getYearOfProduced() {
-        return yearOfProduced;
+    public int getProducedYear() {
+        return producedYear;
     }
 
     public int getHashCode() {
@@ -39,13 +38,17 @@ public final class Car {
 
     @Override
     public String toString() {
-        return String.format("Car {%s %s, %d, %d}", brand, model, yearOfProduced, serialNumber);
+        return "Car {%s %s, %d, %d}".formatted(brand, model, producedYear, serialNumber);
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Car car = (Car) o;
 
         return serialNumber == car.serialNumber && brand.equals(car.brand);

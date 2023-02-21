@@ -1,24 +1,22 @@
 package lesson_47_method_reference.task_3;
 
-import java.util.HashMap;
+import java.util.Map;
 
 public class FilterService {
-    private final HashMap<String, Filter> filters = new HashMap<>();
+    private final Map<String, Filter> filters;
 
     public FilterService() {
-        addFilters();
-    }
-
-    public HashMap<String, Filter> getAll() {
-        return filters;
-    }
-
-    private void addFilters() {
-        filters.put("n", new Filter("number of car", "number", this::filterByNumber));
-        filters.put("s", new Filter("substring in car number", "number", this::filterBySubstring));
+        filters = Map.of(
+                "n", new Filter("number of car", "number", this::filterByNumber),
+                "s", new Filter("substring in car number", "number", this::filterBySubstring),
+                "b", new Filter("brand of car", "word", this::filterByBrand),
+                "y", new Filter("years period of produced", "begin-end", this::filterByYear)
+        );
         // search by brand field instead of searching by color field, as in the task description
-        filters.put("b", new Filter("brand of car", "word", this::filterByBrand));
-        filters.put("y", new Filter("years period of produced", "begin-end", this::filterByYear));
+    }
+
+    public Map<String, Filter> getAll() {
+        return filters;
     }
 
     private boolean filterByNumber(Car car, String target) {
@@ -37,10 +35,11 @@ public class FilterService {
         int[] years = parseYears(target);
         // some logic of validate correct years period
 
-        return car.getYearOfProduced() >= years[0] && car.getYearOfProduced() <= years[1];
+        return car.getProducedYear() >= years[0] && car.getProducedYear() <= years[1];
     }
 
     private int[] parseYears(String input) {
+        // parsing of the years period string is deliberately simplified
         String[] str = input.split("-");
 
         return new int[]{Integer.parseInt(str[0]), Integer.parseInt(str[1])};
