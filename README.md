@@ -158,3 +158,12 @@ Map. Внутреннее устройство реализаций
 
 [Урок 49](https://telegra.ph/Klass-Optional-ili-horoshuyu-veshch-monadoj-ne-nazovut-02-18) |
 Класс Optional или «хорошую вещь монадой не назовут»
+
+[Урок 50](https://telegra.ph/Nemnogo-o-Stream-API-I-mnogo-o-smezhnoj-terminologii-02-24) |
+Немного о Stream API. И много о смежной терминологии
+
+[Урок 51](https://telegra.ph/Iterable-Iterator-i-Spliterator-02-25) |
+Iterable, Iterator и Spliterator
+
+[Урок 52](https://telegra.ph/Stream-API-Sposoby-sozdaniya-Streama-02-26) |
+Stream API. Способы создания Stream'а
