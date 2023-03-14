@@ -173,3 +173,12 @@ Stream. Виды операций
 
 [Урок 54](https://telegra.ph/Stream-API-Promezhutochnye-operacii-03-04) |
 Stream API. Промежуточные операции
+
+[Урок 55](https://telegra.ph/Stream-API-Terminalnye-operacii-03-09) |
+Stream API. Терминальные операции
+
+[Урок 56](https://telegra.ph/Stream-API-Streamy-primitivov-03-11) |
+Stream API. Stream’ы примитивов
+
+[Pet Project #1](https://telegra.ph/Sistema-raspredeleniya-mesta-v-obshchezhitiyah-03-11) |
+Система распределения места в общежитиях
