@@ -1,16 +1,17 @@
 import java.util.LinkedList;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Draft {
     public static void main(String[] args) {
-        Integer a = 4;
-        Integer b = 10;
-        Integer d = 9;
-        //System.out.println(a.compareTo(d) * d.compareTo(b) >= 0);
+        Stream.iterate(1, i -> ++i)
+                .limit(10)
+                .forEach(System.out::print);
+    }
 
-        // 10. Sieve of Eratosthenes / prime numbers
-        LinkedList<Integer> nums = IntStream.rangeClosed(2, 100)
+    private static void printPrimeNumbers(int end) {
+        LinkedList<Integer> nums = IntStream.rangeClosed(2, end)
                 .boxed()
                 .collect(Collectors.toCollection(LinkedList::new));
 
@@ -20,6 +21,9 @@ public class Draft {
         nums.stream()
                 .map(n -> n + " ")
                 .forEach(System.out::print);
+    }
 
+    private static boolean printIsBetween(Integer target, Integer begin, Integer end) {
+        return begin.compareTo(target) * target.compareTo(end) >= 0;
     }
 }

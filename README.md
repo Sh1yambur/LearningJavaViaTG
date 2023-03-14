@@ -167,3 +167,9 @@ Iterable, Iterator и Spliterator
 
 [Урок 52](https://telegra.ph/Stream-API-Sposoby-sozdaniya-Streama-02-26) |
 Stream API. Способы создания Stream'а
+
+[Урок 53](https://telegra.ph/Stream-Vidy-operacij-03-02) |
+Stream. Виды операций
+
+[Урок 54](https://telegra.ph/Stream-API-Promezhutochnye-operacii-03-04) |
+Stream API. Промежуточные операции
