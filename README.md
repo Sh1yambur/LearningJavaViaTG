@@ -180,5 +180,23 @@ Stream API. Терминальные операции
 [Урок 56](https://telegra.ph/Stream-API-Streamy-primitivov-03-11) |
 Stream API. Stream’ы примитивов
 
-[Pet Project #1](https://telegra.ph/Sistema-raspredeleniya-mesta-v-obshchezhitiyah-03-11) |
+[Pet Project #1](https://telegra.ph/Sistema-raspredeleniya-mesta-v-obshchezhitiyah-03-11) | 
 Система распределения места в общежитиях
+
+[Урок 57.1](https://telegra.ph/Stream-API-collect-Collector-Collectors-03-17) | 
+Stream API. collect(), Collector, Collectors. Теория. Часть I
+
+[Урок 57.2](https://telegra.ph/Stream-API-collect-Collector-Collectors-CHast-II-03-17) | 
+Stream API. collect(), Collector, Collectors. Теория. Часть II
+
+[Урок 57.Практика](https://telegra.ph/Stream-API-collect-Collector-Collectors-Praktika-03-17) |
+Stream API. collect(), Collector, Collectors. Практика
+
+[Урок 58](https://telegra.ph/Funkcionalnye-interfejsy-v-kollekciyah-Itogi-razdela-FP-03-22) |
+Функциональные интерфейсы в коллекциях. Итоги раздела ФП
+
+[Урок 59](https://telegra.ph/Mnogopotochnost-Vvedenie-03-25) |
+Многопоточность. Введение
+
+[Урок 60](https://telegra.ph/Mnogopotochnost-Klass-Thread-Sposoby-sozdaniya-potoka-03-25) |
+Многопоточность. Класс Thread. Способы создания потока
