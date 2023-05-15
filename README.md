@@ -5,7 +5,8 @@
 
 ## Содержание
 
-[Roadmap](https://t.me/c/1757251283/5)
+[Roadmap](https://telegra.ph/Java-Road-Map-04-30)
+
 
 [Урок 00](https://telegra.ph/Nastrojka-okruzheniya-11-09-2) |
 Настройка окружения
@@ -200,3 +201,53 @@ Stream API. collect(), Collector, Collectors. Практика
 
 [Урок 60](https://telegra.ph/Mnogopotochnost-Klass-Thread-Sposoby-sozdaniya-potoka-03-25) |
 Многопоточность. Класс Thread. Способы создания потока
+
+[Урок 61](https://telegra.ph/Mnogopotochnost-Sinhronizaciya-potokov-Ponyatie-monitora-Klyuchevoe-slovo-synchronized-03-30) |
+Многопоточность. Синхронизация потоков. Понятие монитора. Ключевое слово synchronized
+
+[Урок 62](https://telegra.ph/Metody-Object-dlya-mnogopotochnosti-04-01) |
+Методы Object для многопоточности
+
+[Урок 63](https://telegra.ph/JMM-Klyuchevoe-slovo-volatile-04-07) |
+Знакомство с JMM. Ключевое слово volatile
+
+[Урок 64](https://telegra.ph/Mnogopotochnost-Metody-klassa-Thread-04-08) |
+Многопоточность. Методы класса Thread
+
+[Урок 65](https://telegra.ph/Mnogopotochnost-javautilconcurrent-Atomic-tipy-04-09) |
+Многопоточность. java.util.concurrent. Atomic-типы
+
+[Урок 66](https://telegra.ph/Mnogopotochnost-javautilconcurrent-Mehanizm-Lock-CHast-I-04-14) |
+Многопоточность. java.util.concurrent. Механизм Lock. Часть I
+
+[Урок 67](https://telegra.ph/Mnogopotochnost-javautilconcurrent-Mehanizm-Lock-CHast-II-04-15) |
+Многопоточность. java.util.concurrent. Механизм Lock. Часть II
+
+[Урок 68](https://telegra.ph/Mnogopotochnost-javautilconcurrent-Mehanizm-Semafor-04-20) |
+Многопоточность. java.util.concurrent. Механизм Семафор
+
+[Урок 69](https://telegra.ph/Sostav-komandy-na-proekte-CHast-I-04-22) |
+Состав команды на проекте. Часть I
+
+[Урок 70](https://telegra.ph/CHast-II-Menedzhery-i-ne-tolko-04-22) |
+Состав команды на проекте. Часть II. Менеджеры и не только
+
+[Урок 71](https://telegra.ph/Mnogopotochnost-javautilconcurrent-Potokobezopasnye-kollekcii-04-29) |
+Многопоточность. java.util.concurrent. Потокобезопасные коллекции
+
+[Урок 72](https://telegra.ph/Mnogopotochnost-javautilconcurrent-Blokiruyushchie-i-neblokiruyushchie-ocheredi-05-07) |
+Многопоточность. java.util.concurrent. Блокирующие и неблокирующие очереди
+
+[Урок 73](https://telegra.ph/javautilconcurrent-Barer-CyclicBarrier-Znakomstvo-s-Phaser-05-08) |
+Многопоточность. java.util.concurrent. Барьер. CyclicBarrier. Знакомство с Phaser
+
+[Урок 74](https://telegra.ph/Mnogopotochnost-javautilconcurrent-ExecutorService-i-ThreadPool-05-09) |
+Многопоточность. java.util.concurrent. ExecutorService и Thread Pool
+
+[Урок 75](https://telegra.ph/Mnogopotochnost-javautilconcurrent-Realizacii-Thread-Pool-i-pri-chem-tut-Stream-API-05-13) |
+Многопоточность. java.util.concurrent. Реализации Thread Pool и при чем тут Stream API
+
+[Урок 76](https://telegra.ph/Mnogopotochnost-Problemy-mnogopotochnosti-05-14) |
+Многопоточность. Проблемы многопоточности
+
+[]() |
