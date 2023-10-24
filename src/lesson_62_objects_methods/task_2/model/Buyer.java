@@ -1,10 +1,9 @@
 package lesson_62_objects_methods.task_2.model;
 
-import java.util.Random;
+import lesson_62_objects_methods.task_2.utility.Randomizer;
 
 public class Buyer {
     private static final int LIMIT = 4;
-    private final Random random = new Random();
     private final Store store;
     private final String name;
     private static int number = 1;
@@ -24,7 +23,7 @@ public class Buyer {
         }
 
         if (lastBought <= 0 || isBoughtSuccessfully) {
-            lastBought = random.nextInt(1, store.getMaxCapacity() / LIMIT);
+            lastBought = Randomizer.get(1, store.getMaxCapacity() / LIMIT);
         }
 
         isBoughtSuccessfully = store.getGoods(name, lastBought);

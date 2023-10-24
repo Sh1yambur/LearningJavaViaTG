@@ -1,10 +1,9 @@
 package lesson_62_objects_methods.task_2.model;
 
-import java.util.Random;
+import lesson_62_objects_methods.task_2.utility.Randomizer;
 
 public class Supplier {
     private static final int LIMIT = 2;
-    private final Random random = new Random();
     private final Store store;
     private final String name;
     private static int number = 1;
@@ -19,7 +18,7 @@ public class Supplier {
 
     public void deliver() {
         if (undeliveredGoods == 0) {
-            undeliveredGoods = random.nextInt(1, store.getMaxCapacity() / LIMIT);
+            undeliveredGoods = Randomizer.get(1, store.getMaxCapacity() / LIMIT);
         }
 
         undeliveredGoods = store.addGoods(name, undeliveredGoods);
