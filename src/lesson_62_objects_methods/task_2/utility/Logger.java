@@ -1,4 +1,4 @@
-package lesson_62_objects_methods.task_2;
+package lesson_62_objects_methods.task_2.utility;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

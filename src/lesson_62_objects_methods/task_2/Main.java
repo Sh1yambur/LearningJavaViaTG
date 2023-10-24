@@ -1,6 +1,12 @@
 package lesson_62_objects_methods.task_2;
 // https://telegra.ph/Metody-Object-dlya-mnogopotochnosti-04-01
 
+import lesson_62_objects_methods.task_2.model.Store;
+import lesson_62_objects_methods.task_2.service.BuyerService;
+import lesson_62_objects_methods.task_2.service.SupplierService;
+import lesson_62_objects_methods.task_2.utility.Logger;
+import lesson_62_objects_methods.task_2.utility.ThreadKiller;
+
 import java.util.Scanner;
 
 /*

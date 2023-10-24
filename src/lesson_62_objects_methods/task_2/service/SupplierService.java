@@ -1,4 +1,8 @@
-package lesson_62_objects_methods.task_2;
+package lesson_62_objects_methods.task_2.service;
+
+import lesson_62_objects_methods.task_2.utility.ThreadKiller;
+import lesson_62_objects_methods.task_2.model.Store;
+import lesson_62_objects_methods.task_2.model.Supplier;
 
 public class SupplierService implements Runnable {
     private final Supplier supplier;

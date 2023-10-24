@@ -1,4 +1,8 @@
-package lesson_62_objects_methods.task_2;
+package lesson_62_objects_methods.task_2.service;
+
+import lesson_62_objects_methods.task_2.utility.ThreadKiller;
+import lesson_62_objects_methods.task_2.model.Buyer;
+import lesson_62_objects_methods.task_2.model.Store;
 
 public class BuyerService implements Runnable {
     private final Buyer buyer;

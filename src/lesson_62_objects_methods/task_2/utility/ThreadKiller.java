@@ -1,4 +1,4 @@
-package lesson_62_objects_methods.task_2;
+package lesson_62_objects_methods.task_2.utility;
 
 public class ThreadKiller {
     private boolean isAlive = true;

@@ -1,4 +1,6 @@
-package lesson_62_objects_methods.task_2;
+package lesson_62_objects_methods.task_2.model;
+
+import lesson_62_objects_methods.task_2.utility.Logger;
 
 public class Store {
     private final int maxCapacity;
